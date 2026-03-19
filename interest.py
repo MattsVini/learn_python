@@ -8,6 +8,7 @@ def increase_amount(increasing):
 
 while flag:
     flagtwo = True
+    interest = balance_base * (tax / 100)
     print()
     print("Ok:")
     print(f"Name: {name}")
@@ -20,10 +21,10 @@ while flag:
         break
     else:
         while flagtwo:
-            change = input("What you do would like to change? interest(i), approach(a) or exit(e)")
+            change = input("What you do would like to change? interest(i), approach(a) or exit(e): ")
             if change.lower() == "i":
-                value = float(input("Type value of interest: "))
-                tax = value
+                tax = float(input("Type value of interest: "))
+
             elif change.lower() == "a":
                 value = float(input("Type value for approach"))
                 balance_base = increase_amount(value)
